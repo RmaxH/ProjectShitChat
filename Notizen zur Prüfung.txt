@@ -1,0 +1,15 @@
+Prüfung 17:30
+Präsentation ca 10 min, muss bis 27.01. 23:59 per Mail an darius.schippritt@hshl.de UND inga.karl@hshl.de
+- Worum gehts?
+- Für welchen Kontext ist die App gedacht?
+- Was zum Desgin
+- Welche Frameworks/ Tools wurden verwendet?
+
+Doku:
+Min 10 Seiten, max 20 
+Worum gehts?
+Wer hat was gemacht?
+Welche technologien wurden verwendet?
+Wo gab es Probleme?
+Screenshot
+
