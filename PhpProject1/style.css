@@ -66,7 +66,19 @@ a{
 	background: #f5bb43;
 	cursor: pointer;
 }
+/*
+#login{
+	float:left;
+	display:block;
+}
 
+#guest{
+	float: right;
+}
+
+display:block;
+}
+*/
 .error {
 	box-sizing: border-box;
     width: 100%; 
