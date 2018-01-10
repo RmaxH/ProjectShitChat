@@ -11,16 +11,17 @@ and open the template in the editor.
 * {
     margin: 0px;
     padding: 0px;
+	font-family: Calibri;
 }
 body {
-    background: #505050;
+    background: #333333;
 }
 
 .header {
     width: 30%;
-    margin: 50px auto 0px;
+    margin: 220px auto 0px;
     color: black;
-    background: #F99560;
+    background: #f59111;
     text-align: center;
     border-bottom: none;
 	border-radius: 5px 5px 0px 0px;
@@ -43,25 +44,35 @@ a{
 
 }
 .input-group input {
+	box-sizing: border-box;
     height: 30px;
-    width: 93%;
-    padding: 5px 10px;
+    width: 100%;
+    padding: 5px 15px;
     font-size: 16px;
 	border-radius: 5px;
     border: 1px solid gray;
 }
 .btn {
+	margin: 0px auto; 
     padding: 10px;
     font-size: 15px;
     color: black;
 	border-radius: 5px;
-    background: #F99560;
+    background: #f59111;
     border: none;
+	box-shadow: 1px 1px 0px 0px rgba(0,0,0,0.5);
 }
+.btn:hover {
+	background: #f5bb43;
+	cursor: pointer;
+}
+
 .error {
-    width: 92%; 
-    margin: 0px auto; 
+	box-sizing: border-box;
+    width: 100%; 
+ 
     padding: 10px; 
+	border-radius: 5px;
     border: 1px solid #a94442; 
     color: #a94442; 
     background: #f2dede; 
@@ -80,13 +91,10 @@ a{
     
     padding: 20px;
     margin: 0px auto;
-    background: #A1A1A1;
+    background: #808080;
     text-align: center;
 }
 
-body{
-    background: #505050;
-}
 .chatContainer{
 
 }
