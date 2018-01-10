@@ -74,8 +74,10 @@ a{
 
 #guest{
 	float: right;
+	display:block;
 }
 
+.registerParagraph{
 display:block;
 }
 */
