@@ -1,0 +1,103 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10.01.2018, 01:29:41
+    Author     : Rouven
+*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    background: #505050;
+}
+
+.header {
+    width: 30%;
+    margin: 50px auto 0px;
+    color: black;
+    background: #F99560;
+    text-align: center;
+    border-bottom: none;
+    padding: 20px;
+}
+form {
+    width: 30%;
+    margin: 0px auto;
+    padding: 20px;
+    background: #A1A1A1;
+}
+
+a{
+    text-decoration: none;
+}
+
+.input-group {
+    margin: 10px 0px 10px 0px;
+
+}
+.input-group input {
+    height: 30px;
+    width: 93%;
+    padding: 5px 10px;
+    font-size: 16px;
+
+    border: 1px solid gray;
+}
+.btn {
+    padding: 10px;
+    font-size: 15px;
+    color: black;
+    background: #F99560;
+    border: none;
+}
+.error {
+    width: 92%; 
+    margin: 0px auto; 
+    padding: 10px; 
+    border: 1px solid #a94442; 
+    color: #a94442; 
+    background: #f2dede; 
+
+    text-align: left;
+}
+.success {
+    color: #3c763d; 
+    background: #dff0d8; 
+    border: 1px solid #3c763d;
+    margin-bottom: 20px;
+}
+
+.content{
+    width: 20%;
+    
+    padding: 20px;
+    margin: 0px auto;
+    background: #A1A1A1;
+    text-align: center;
+}
+
+body{
+    background: #505050;
+}
+.chatContainer{
+
+}
+
+.chatButton{
+    
+}
+
+.chatButton input text{
+    width: 70%;
+}
+
+.text{
+    width: 70%;
+}
+
+
