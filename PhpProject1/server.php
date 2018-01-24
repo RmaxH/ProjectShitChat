@@ -4,6 +4,7 @@ session_start();
 // variable declaration
 $username = "";
 $email    = "";
+$message = "";
 $errors = array(); 
 $_SESSION['success'] = "";
 
