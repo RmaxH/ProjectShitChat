@@ -29,6 +29,7 @@ body {
 }
 form {
     width: 30%;
+	min-width: 300px;
     margin: 0px auto;
     padding: 20px;
 	border-radius: 0px 0px 5px 5px;
@@ -128,8 +129,9 @@ display:block;
 /* Style the tab */
 .tab {
     overflow: hidden;
-
+	
 	width: 30%;
+	min-width: 300px;
     margin: 220px auto 0px;
     color: black;
     background: #f59111;
@@ -166,6 +168,18 @@ display:block;
 /* Style the tab content */
 .tabcontent {
     display: none;
+
 }
 
+.welcome{
 
+	text-align: center;
+	color: white;
+	margin: 0 auto;
+}
+
+.logo{
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+}

@@ -8,6 +8,12 @@
 	
 	<body>
 	<script src="tabControl.js"></script>
+	
+	<div class="welcome">
+		Willkommen bei
+		<img src="logo.png" alt="Logo" class="logo" height="148" width="200">
+	</div>
+
 	  <div class="tab">
 		<button class="tablinks" onclick="openForm(event, 'Register')">Register</button>
 		<button class="tablinks" onclick="openForm(event, 'Login')" id="defaultOpen">Login</button>
