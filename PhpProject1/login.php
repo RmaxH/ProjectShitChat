@@ -3,7 +3,7 @@
 <html>
 	<head>
 	  <title>ChitCat</title>
-	  <link rel="stylesheet" type="text/css" href="styleKopie.css">
+	  <link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	
 	<body>
@@ -60,7 +60,7 @@
 				Achtung: Für Gäste werden keine Daten gespeichert.
 			</p>
 			<div class="input-group">
-				<button type="submit" class="btn" id="login" name="login_user">Zum Chat</button>
+				<button type="submit" class="btn" id="guest" name="login_guest">Zum Chat</button>
 			</div>
 			</form>
 		</div>
