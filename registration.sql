@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 10. Jan 2018 um 14:47
+-- Erstellungszeit: 25. Jan 2018 um 21:18
 -- Server-Version: 10.1.26-MariaDB
 -- PHP-Version: 7.1.9
 
@@ -30,19 +30,22 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
-  `username` varchar(255) CHARACTER SET utf8 COLLATE utf8_german2_ci NOT NULL,
-  `email` varchar(255) CHARACTER SET utf8 COLLATE utf8_german2_ci NOT NULL,
-  `password` varchar(255) CHARACTER SET utf8 COLLATE utf8_german2_ci NOT NULL
+  `username` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `email` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `password` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `message` text CHARACTER SET utf8 NOT NULL,
+  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Daten für Tabelle `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES
-(3, 'Mona', 'mona@mona.de', '4af5cab77c62eaec5f87b570f2d2b127'),
-(4, 'lara', 'lara@sievers-home.de', '128ecf542a35ac5270a87dc740918404'),
-(5, 'Rmax', 'rouven94@t-online.de', '1040a4c9b3f604d78fcd61a821477a1b');
+INSERT INTO `users` (`id`, `username`, `email`, `password`, `message`, `time`) VALUES
+(9, 'Rmaxh', 'rmaxh@email.de', 'cc03e747a6afbbcbf8be7668acfebee5', 'fdsa', '2018-01-25 16:53:14'),
+(10, 'Klaus', 'Klausemail@email.de', 'cc03e747a6afbbcbf8be7668acfebee5', 'fdsa', '2018-01-25 16:53:14'),
+(11, '', '', '', '', '2018-01-25 17:29:45'),
+(12, '', '', '', '', '2018-01-25 17:33:41');
 
 --
 -- Indizes der exportierten Tabellen
@@ -62,7 +65,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT für Tabelle `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
