@@ -19,7 +19,7 @@ body {
 
 .header {
     width: 30%;
-    margin: 220px auto 0px;
+    
     color: black;
     background: #f59111;
     text-align: center;
@@ -29,7 +29,7 @@ body {
 }
 form {
     width: 30%;
-	min-width: 300px;
+	min-width: 360px;
     margin: 0px auto;
     padding: 20px;
 	border-radius: 0px 0px 5px 5px;
@@ -54,9 +54,9 @@ a{
     border: 1px solid gray;
 }
 .btn {
-	margin: 0px auto; 
+	margin: 10px 0 0 0; 
     padding: 10px;
-    font-size: 15px;
+    font-size: 12pt;
     color: black;
 	border-radius: 5px;
     background: #f59111;
@@ -129,10 +129,10 @@ display:block;
 /* Style the tab */
 .tab {
     overflow: hidden;
-	
+
 	width: 30%;
-	min-width: 300px;
-    margin: 220px auto 0px;
+	min-width: 360px;
+    margin: 0px auto 0px;
     color: black;
     background: #f59111;
 	text-align: center;
@@ -165,6 +165,11 @@ display:block;
     background-color: #E37310;
 }
 
+.tablinks{
+	font-size: 12pt;
+	min-width: 110px;
+}
+
 /* Style the tab content */
 .tabcontent {
     display: none;
@@ -172,9 +177,11 @@ display:block;
 }
 
 .welcome{
-
+	font-family:"Script MT", Calibri;
+	font-size: 24pt;
 	text-align: center;
 	color: white;
+	padding-top: 70px;
 	margin: 0 auto;
 }
 
@@ -182,4 +189,5 @@ display:block;
 	display: block;
 	text-align: center;
 	margin: 0 auto;
+	padding: 50px;
 }
