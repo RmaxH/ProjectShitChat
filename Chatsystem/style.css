@@ -1,32 +1,111 @@
+* {
+    margin: 0px;
+    padding: 0px;
+	font-family: Calibri;
+}
+
 body{
-	background-color: gray;
+	background-color: #333333;
 }
 
-#main{
-	height: 450px;
-	background-color: white;
-	margin-top: 100px;
-	border:1px solid orange;
+form {
+    width: 30%;
+	min-width: 360px;
+    margin: 0px auto;
+    padding: 20px;
+	border-radius: 0px 0px 5px 5px;
+    background: #A1A1A1;
+}
+
+.welcome{
+	font-family:"Script MT", Calibri;
+	font-size: 24pt;
+	text-align: center;
+	color: white;
+	padding-top: 70px;
+	margin: 0 auto;
+}
+
+.logo{
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+	padding: 50px;
+}
+
+
+.btn {
+	margin: 10px 0 0 0; 
+    padding: 10px;
+    font-size: 12pt;
+    color: black;
 	border-radius: 5px;
-	
+    background: #f59111;
+    border: none;
+	box-shadow: 1px 1px 0px 0px rgba(0,0,0,0.5);
 }
 
-#info{
-	margin-left: 20px; 
-	margin-top: 2px;
+.btn:hover {
+	background: #f5bb43;
+	cursor: pointer;
 }
 
-input[type=text]{
-	width: 260px;
+.tab {
+    overflow: hidden;
+
+	width: 30%;
+	min-width: 360px;
+    margin: 0px auto 0px;
+    color: black;
+    background: #f59111;
+	text-align: center;
+    border-bottom: none;
+	border-radius: 5px 5px 0px 0px;
+    padding: 10px 20px;
+}
+
+.tab button {
+    background-color: inherit;
+	margin: 0 auto;
+	width: 30%;
+	display: inline;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+	border-radius: 5px;
+}
+
+.tab button:hover {
+    background-color: #f5bb43;
+}
+
+.tab button.active {
+    background-color: #E37310;
+}
+
+.tablinks{
+	font-size: 12pt;
+	min-width: 110px;
+}
+
+.tabcontent {
+    display: none;
+
+}
+
+.input-group {
+    margin: 10px 0px 10px 0px;
+
+}
+
+.input-group input {
 	box-sizing: border-box;
-	border: 1px solid orange;
-	border-radius: 3px;
+    height: 30px;
+    width: 100%;
+    padding: 5px 15px;
+    font-size: 16px;
+	border-radius: 5px;
+    border: 1px solid gray;
 }
-
-input[type=password]{
-	width: 260px;
-	box-sizing: border-box;
-	border: 1px solid orange;
-	border-radius: 3px;
-}
-
