@@ -1,6 +1,6 @@
 <?php
 	session_start();
-
+	include 'db.php';
 ?>
 
 
@@ -12,10 +12,31 @@
 </head>
 <body>
 
-	<div>
+	<div >
 		<h1 style="background-color: #6495ED;color: white;"><?php echo $_SESSION['name']?>-online</h1>
 
 		<div class="output">
+			<?php
+
+				$sql = "SELECT  * FROM posts " ;
+				$result = $conn->query($sql);
+
+				if ($result->num_rows > 0){
+
+					while($row = $result->fetch_assoc()){
+						echo "" . $row["name"]. " " . $row["date"] .":   " . "" .$row["message"].  "<br>";
+						echo "<br>";
+					}
+				}else{
+					echo "0 results";
+				}
+				$conn->close();
+
+
+
+			?>
+
+
 			
 
 		</div>
