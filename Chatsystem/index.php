@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +13,7 @@
 	</div>
 	
 	<div class="tab">
-		<button class="tablinks" onclick="openForm(event, 'Register')">Register</button>
+		<button class="tablinks" onclick="openForm(event, 'Register')">Registrieren</button>
 		<button class="tablinks" onclick="openForm(event, 'Login')" id="defaultOpen">Login</button>
 		<button class="tablinks" onclick="openForm(event, 'Gastzugang')">Gastzugang</button>
 	</div>
@@ -20,15 +21,18 @@
 	<div id="Register" class="tabcontent">
 		<form action="registrieren.php" method="post">
 		<div class="input-group">
-			<input type="text" name="uname" placeholder="Benutzername">
+			<input type="text" name="username" placeholder="Benutzername">
 		</div>
 		<div class="input-group">
 			<input type="text" name="Email" placeholder="E-Mail">
 		</div>
 		<div class="input-group">
-			<input type="password" name="Password" placeholder="Passwort"><br><br>	
+			<input type="password" name="Passwort1" placeholder="Passwort">
 		</div>
-			<button class="btn" type="submit">Registrieren</button>	
+		<div class="input-group">
+			<input type="password" name="Passwort2" placeholder="Passwort bestätigen"><br><br>
+		</div>
+			<button class="btn" type="submit" name="reg_user">Registrieren</button>
 
 		</form>
 	</div>
@@ -36,17 +40,17 @@
 	<div id="Login" class="tabcontent">
 		<form action="login.php" method="post">
 		<div class="input-group">
-			<input type="text" name="uname" placeholder="Benutzername">
+			<input type="text" name="username" placeholder="Benutzername">
 		</div>
 		<div class="input-group">			
-			<input type="password" name="pass" placeholder="Passwort">
+			<input type="password" name="passwort" placeholder="Passwort">
 		</div>	
-			<button class="btn" type="submit">Einloggen</button>	
+			<button class="btn" type="submit" name="login_user">Einloggen</button>	
 		</form>
 	</div>
 	
 	<div id="Gastzugang" class="tabcontent">
-		<form method="post" action="home.php">
+		<form method="post" action="gastzugang.php">
 			<div class="input-group">
 				<input type="text" name="username" placeholder="Benutzername">
 			</div>
@@ -59,32 +63,6 @@
 			</form>
 	</div>
 	
-<!--	<div id="info">
-			<h2>Login here</h2>
-
-			<form action="login.php" method="post">
-			<label><b>Benutzername</b></label>
-			<input type="text" name="uname" placeholder="Benutzername"><br><br>	
-			<label><b>Passwort</b></label>
-			<input type="password" name="pass" placeholder="Passwort"><br><br>	
-			<button type="submit">Einloggen</button>	
-
-			</form>
-			
-
-		<form action="registrieren.php" method="post">
-				<h2>Noch kein Mitglied?</h2>
-			<label><b>Benutzername</b></label>
-				<input type="text" name="uname" placeholder="Benutzername"><br><br>	
-			<label><b>E-Mail</b></label>
-				<input type="text" name="Email" placeholder="E-Mail"><br><br>	
-			<label><b>Passwort</b></label>
-				<input type="password" name="Password" placeholder="Passwort"><br><br>	
-
-			<button type="submit">Registrieren</button>	
-
-			</form> 
-	</div>			-->
 
 	<script>
 		document.getElementById("defaultOpen").click();

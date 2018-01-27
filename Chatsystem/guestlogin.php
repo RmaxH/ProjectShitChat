@@ -3,10 +3,8 @@ session_start();
 include 'db.php';
 
 $username = $_POST['username']; 
-$pass = $_POST['passwort']; 
-$pass = md5($passwort);
-$sql = "SELECT * FROM registriere WHERE username='$username' AND passwort ='$pass'";
 
+$sql = "INSERT INTO gastzugang (name)";
 $result = $db->query($sql);
 
 if (!$row = $result->fetch_assoc()){
@@ -16,8 +14,6 @@ if (!$row = $result->fetch_assoc()){
 
 	$_SESSION['name'] = $_POST['username'];
 
-	header("Location:home.php");
+	header("Location:gastzugang.php");
 }
-
-
 ?>
