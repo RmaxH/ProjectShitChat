@@ -38,6 +38,9 @@
 					<input class="btn" type="submit" value="Ausloggen" id="logout" action="ausloggen.php">
 				</form>
 			</li>
+			<li class="welcomeUser">
+				Im Chat:
+			</li>
 		</ul>
 
 	</div>
