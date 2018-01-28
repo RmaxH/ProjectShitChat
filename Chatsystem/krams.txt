@@ -1,0 +1,10 @@
+Nicht probiert:
+
+function startTimer() {
+     $("#messageboard").load("chat.php #messageboard > *", function(){
+          //repeats itself after 1 seconds
+          setTimeout(startTimer, 1000);
+     });
+}
+
+startTimer();

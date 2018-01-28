@@ -10,3 +10,17 @@ function scrollToBottom (id) {
 
             });
         }); */
+		
+
+		$(document).ready( function(){
+		$('#chatr').load('inhalt.php');
+		refresh();
+		});
+		 
+		function refresh()
+		{
+			setTimeout( function() {
+			  $('#chatr').load('inhalt.php');
+			  refresh();
+			}, 2000);
+		}

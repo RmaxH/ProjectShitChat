@@ -1,26 +1,24 @@
 <?php
 	session_start();
 	include 'db.php';
-
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Let's Chat!</title>
-	<meta http-equiv="refresh" content="10">
+	<!--<meta http-equiv="refresh" content="10">-->
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.0/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="home.js"></script>
 </head>
 <body onload="scrollToBottom('chatr')">
 
 	<script type="text/javascript">
-
 		function toggleSidebar(){
 			document.getElementById("sidebar").classList.toggle('active');
-
 		}
+
 	</script>
 
 	<div id="sidebar" onclick="toggleSidebar()">
@@ -32,7 +30,8 @@
 		</div>
 		
 		<ul>
-			<li><h1 class="welcomeUser" >Willkommen <?php echo "<br>" . $_SESSION['name']?></h1></li>
+			<li>
+				<h1 class="welcomeUser" >Willkommen <?php echo "<br>" . $_SESSION['name']?></h1></li>
 			<li>
 				<form action="ausloggen.php">
 					<input class="btn" type="submit" value="Ausloggen" id="logout" action="ausloggen.php">
@@ -48,10 +47,8 @@
 
 					if ($result2->num_rows > 0){
 
-						while($row = $result2->fetch_assoc()){
-							echo "<p class='separator'>" . "" . "</p>" . "<br>";
-							echo "" . $row["username"]. "<br>";
-							echo "<br>";
+						while($row = $result2->fetch_assoc()){;
+							echo "<br>" . $row["username"]. "<br>";
 						}
 					}
 				?>
@@ -65,25 +62,26 @@
 		<div class="content">
 			<div class="output"  id="chatr">
 				<?php
+					include 'db.php';
 
-					$sql = "SELECT  * FROM posts " ;
-					$result = $db->query($sql);
+										
+						$sql = "SELECT  * FROM posts " ;
+						$result = $db->query($sql);
 
-					if ($result->num_rows > 0){
+						if ($result->num_rows > 0){
 
-						while($row = $result->fetch_assoc()){
+							while($row = $result->fetch_assoc()){
 							echo "<p class='separator'>" . "" . "</p>" . "<br>";
 							echo "" . $row["name"]. "<span class='lightgrey'>" . " | " . $row["date"] .":   " . "" . "</span>" . "<br>";
 							echo $row["message"] . "<br>";
 							echo "<br>";
+							}
 						}
-					}else{
+						else{
 						echo "Schreibe eine Nachricht";
 					}
 					$db->close();
-
 				?>
-				
 			</div>
 	
 			<form class="messageArea" method="post" action="send.php">
