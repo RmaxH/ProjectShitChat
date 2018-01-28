@@ -19,7 +19,7 @@
 	</div>
 
 	<div id="Register" class="tabcontent">
-		<form action="registrieren.php" method="post">
+		<form class="formStyle" action="registrieren.php" method="post">
 		<div class="input-group">
 			<input type="text" name="username" placeholder="Benutzername">
 		</div>
@@ -38,7 +38,7 @@
 	</div>
 		
 	<div id="Login" class="tabcontent">
-		<form action="login.php" method="post">
+		<form class="formStyle" action="login.php" method="post">
 		<div class="input-group">
 			<input type="text" name="username" placeholder="Benutzername">
 		</div>
@@ -50,7 +50,7 @@
 	</div>
 	
 	<div id="Gastzugang" class="tabcontent">
-		<form method="post" action="gastzugang.php">
+		<form class="formStyle" method="post" action="gastzugang.php">
 			<div class="input-group">
 				<input type="text" name="username" placeholder="Benutzername">
 			</div>
