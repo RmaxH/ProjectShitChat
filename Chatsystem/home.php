@@ -41,6 +41,21 @@
 			<li class="welcomeUser">
 				Im Chat:
 			</li>
+			<li>
+				<?php
+					$sql2 = "SELECT username FROM registriere WHERE isOnline=1" ;
+					$result2 = $db->query($sql2);
+
+					if ($result2->num_rows > 0){
+
+						while($row = $result2->fetch_assoc()){
+							echo "<p class='separator'>" . "" . "</p>" . "<br>";
+							echo "" . $row["username"]. "<br>";
+							echo "<br>";
+						}
+					}
+				?>
+			</li>
 		</ul>
 
 	</div>
