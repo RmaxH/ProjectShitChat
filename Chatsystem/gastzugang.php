@@ -31,30 +31,12 @@
 		
 		<ul>
 			<li>
-				<h1 class="welcomeUser" >Willkommen <?php echo "<br>" . $_SESSION['name']?></h1>
+				<h1 class="welcomeUser" >Willkommen <?php echo "<br>" . $_SESSION['username']?></h1>
 			</li>
 			<li>
 				<form action="ausloggen.php">
 					<input class="btn" type="submit" value="Ausloggen" id="logout" action="ausloggen.php">
 				</form>
-			</li>
-			<li class="welcomeUser">
-				Im Chat:
-			</li>
-			<li>
-				<?php
-					$sql2 = "SELECT username FROM gastzugang WHERE isOnline=1" ;
-					$result2 = $db->query($sql2);
-
-					if ($result2->num_rows > 0){
-
-						while($row = $result2->fetch_assoc()){
-							echo "<p class='separator'>" . "" . "</p>" . "<br>";
-							echo "" . $row["username"]. "<br>";
-							echo "<br>";
-						}
-					}
-				?>
 			</li>
 		</ul>
 
@@ -64,14 +46,14 @@
 			<div class="output"  id="chatr">
 				<?php
 
-					$sql = "SELECT  * FROM gastzugang " ;
+					$sql = "SELECT  * FROM guestposts " ;
 					$result = $db->query($sql);
 
 					if ($result->num_rows > 0){
 
 						while($row = $result->fetch_assoc()){
 							echo "<p class='separator'>" . "" . "</p>" . "<br>";
-							echo "" . $row["username"]. "<span class='lightgrey'>" . " | " . $row["date"] .":   " . "" . "</span>" . "<br>";
+							echo "" . $row["username"]. "<span class='lightgrey'>" . " | " . $row["time"] .":   " . "" . "</span>" . "<br>";
 							echo $row["message"] . "<br>";
 							echo "<br>";
 						}

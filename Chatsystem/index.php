@@ -50,7 +50,7 @@
 	</div>
 	
 	<div id="Gastzugang" class="tabcontent">
-		<form class="formStyle" method="post" action="gastzugang.php">
+		<form class="formStyle" action="guestlogin.php" method="post">
 			<div class="input-group">
 				<input type="text" name="username" placeholder="Benutzername">
 			</div>

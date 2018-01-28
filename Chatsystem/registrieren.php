@@ -5,8 +5,7 @@ $username = $_POST['username'];
 $email = $_POST['Email']; 
 $pass = $_POST['Passwort1']; 
 $pass = md5($passwort);
-$sql = "INSERT INTO registriere(username,email,passwort) 
-VALUES ('$username','$email','$pass')";
+$sql = "INSERT INTO registriere(username,email,passwort) VALUES ('$username','$email','$pass')";
 $result = $db->query($sql);
 header("Location:index.php");
 
