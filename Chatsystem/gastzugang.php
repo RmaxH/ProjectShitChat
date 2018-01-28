@@ -9,7 +9,7 @@
 	<title>Gast</title>
 
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.0/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="home.js"></script>
 </head>
 <body onload="scrollToBottom('chatr')">
@@ -35,7 +35,7 @@
 			</li>
 			<li>
 				<form action="ausloggen.php">
-					<input type="submit" value="Ausloggen" id="logout" action="ausloggen.php">
+					<input class="btn" type="submit" value="Ausloggen" id="logout" action="ausloggen.php">
 				</form>
 			</li>
 			<li class="welcomeUser">
