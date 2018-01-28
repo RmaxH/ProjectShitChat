@@ -3,9 +3,9 @@
 session_start();
 include 'db.php';
 $message=$_POST['message'];
-$name = $_SESSION['name'];
+$name = $_SESSION['username'];
 
-$sql = "INSERT INTO gastzugang(message,name) VALUES('$message','$name')";
+$sql = "INSERT INTO gastzugang(message,username) VALUES('$message','$name')";
 
 $result = $db->query($sql);
 

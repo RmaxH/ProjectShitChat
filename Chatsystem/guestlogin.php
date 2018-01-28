@@ -1,19 +1,11 @@
 <?php
-session_start();
+
 include 'db.php';
-
 $username = $_POST['username']; 
-
-$sql = "INSERT INTO gastzugang (name)";
+$sql = "INSERT INTO gastzugang (username) VALUES ('$username')";
 $result = $db->query($sql);
+header("Location:gastzugang.php");
 
-if (!$row = $result->fetch_assoc()){
-	header("Location:error.php");
 
-}else{
 
-	$_SESSION['name'] = $_POST['username'];
-
-	header("Location:gastzugang.php");
-}
 ?>
