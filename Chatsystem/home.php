@@ -7,26 +7,19 @@
 <html>
 <head>
 	<title>Let's Chat!</title>
-	<!--<meta http-equiv="refresh" content="10">-->
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="home.js"></script>
 </head>
-<body onload="scrollToBottom('chatr')">
-
-	<script type="text/javascript">
-		function toggleSidebar(){
-			document.getElementById("sidebar").classList.toggle('active');
-		}
-
-	</script>
-
+<body>
+	
+	<!-- sidebar -->
 	<div id="sidebar" onclick="toggleSidebar()">
 		<div class="toggle-btn">
+			<!-- Icon der Sidebar -->
 			<span></span>
 			<span></span>
 			<span></span>
-			
 		</div>
 		
 		<ul>
@@ -41,6 +34,7 @@
 				Im Chat:
 			</li>
 			<li>
+				<!-- Gibt die eingeloggten User aus -->
 				<?php
 					$sql2 = "SELECT username FROM registriere WHERE isOnline=1" ;
 					$result2 = $db->query($sql2);
@@ -56,40 +50,18 @@
 		</ul>
 
 	</div>
-
-	<div >
-		
+	<div >	
+	
 		<div class="content">
+			<!-- Beinhaltet den Chatverlauf -->
 			<div class="output"  id="chatr">
-				<?php
-					include 'db.php';
-
-										
-						$sql = "SELECT  * FROM posts " ;
-						$result = $db->query($sql);
-
-						if ($result->num_rows > 0){
-
-							while($row = $result->fetch_assoc()){
-							echo "<p class='separator'>" . "" . "</p>" . "<br>";
-							echo "" . $row["name"]. "<span class='lightgrey'>" . " | " . $row["date"] .":   " . "" . "</span>" . "<br>";
-							echo $row["message"] . "<br>";
-							echo "<br>";
-							}
-						}
-						else{
-						echo "Schreibe eine Nachricht";
-					}
-					$db->close();
-				?>
 			</div>
 	
 			<form class="messageArea" method="post" action="send.php">
-				<input class="myMessage" type="text" rows="2" name="message" placeholder="Schreib eine Nachricht" class="form-ctrl">
+				<input class="myMessage" type="text" name="message" placeholder="Schreib eine Nachricht" class="form-ctrl">
 				<input class="btn send" type="submit" value="Senden">	
 			</form>
-			
-		<button onClick="scrollToBottom('chatr')">To be or not to be</button>
+
 		</div>
 	</div>
 </body>

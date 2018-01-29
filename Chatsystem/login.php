@@ -15,13 +15,9 @@ $result = $db->query($sql);
 
 if (!$row = $result->fetch_assoc()){
 	header("Location:error.php");
-
-}else{
-
+	}
+	else{
 	$_SESSION['name'] = $_POST['username'];
-
 	header("Location:home.php");
-}
-
-
+	}
 ?>

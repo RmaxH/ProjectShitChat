@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,6 +17,7 @@
 		<button class="tablinks" onclick="openForm(event, 'Gastzugang')">Gastzugang</button>
 	</div>
 
+	<!-- Registrierungsformular -->
 	<div id="Register" class="tabcontent">
 		<form class="formStyle" action="registrieren.php" method="post">
 		<div class="input-group">
@@ -33,10 +33,10 @@
 			<input type="password" name="Passwort2" placeholder="Passwort bestätigen"><br><br>
 		</div>
 			<button class="btn" type="submit" name="reg_user">Registrieren</button>
-
 		</form>
 	</div>
 		
+	<!-- Loginformular -->
 	<div id="Login" class="tabcontent">
 		<form class="formStyle" action="login.php" method="post">
 		<div class="input-group">
@@ -49,6 +49,7 @@
 		</form>
 	</div>
 	
+	<!-- Formular für Gastzugänge -->
 	<div id="Gastzugang" class="tabcontent">
 		<form class="formStyle" action="guestlogin.php" method="post">
 			<div class="input-group">
@@ -60,10 +61,8 @@
 			<div class="input-group">
 				<button type="submit" class="btn" id="guest" name="login_guest">Zum Chat</button>
 			</div>
-			</form>
+		</form>
 	</div>
-	
-
 	<script>
 		document.getElementById("defaultOpen").click();
 	</script>

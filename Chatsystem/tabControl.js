@@ -1,3 +1,5 @@
+//Quelle: https://www.w3schools.com/howto/howto_js_tabs.asp
+
 function openForm(evt, formName) {
     // Declare all variables
     var i, tabcontent, tablinks;
